@@ -97,6 +97,8 @@
 
 - 运行效果图
 
+<p align="center"><img src="images/robot/运行效果.gif" width="50%" align=center />
+
 
 ### 3 位置获取
 
@@ -163,6 +165,8 @@
 上图给出了位姿估计网络模型在左、右哨兵视角下的角度分类准确率。通过图示可以得出，通过将世界坐标系下的角度转换为相机坐标系下的角度，位姿估计模型有效地实现了角度的8分类。
 
 - 运行效果图
+
+<p align="center"><img src="images/pose/运行效果.gif" width="50%" align=center />
 
 ### 5 基于卡尔曼的多传感器融合
 - 算法流程
