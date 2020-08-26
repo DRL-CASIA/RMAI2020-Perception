@@ -132,11 +132,11 @@
 
 4. 姿态估计
 - 算法流程
-<img src="images/robot/位姿流程图.png" width="50%" align=center />
+<img src="images/pose/位姿流程图.png" width="50%" align=center />
 该模型由左、右两侧哨兵视角的角度分类网络构成。以左侧哨兵视角为例，将哨兵视角下的车体目标框信息及其在世界坐标系下的（x,y）坐标输入到卷积角度分类模型中，有效地实现了角度分类。
 
 - 位姿结果
-<img src="images/robot/位姿结果.png" width="50%" align=center />
+<img src="images/pose/位姿结果.png" width="50%" align=center />
 上图给出了位姿估计网络模型在左、右哨兵视角下的角度分类准确率。通过图示可以得出，通过将世界坐标系下的角度转换为相机坐标系下的角度，位姿估计模型有效地实现了角度的8分类。
 
 - 运行效果图
