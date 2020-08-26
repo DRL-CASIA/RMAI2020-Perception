@@ -64,8 +64,20 @@
 
 ### 软件功能介绍
 
+#### Yolo 检测模型
+- 模型介绍
+<img src="images/Yolo检测/snap01711..jpg" width="80%" align=middle />
+哨兵将采集到的图像输入到yolov3-boosting模型中后，该模型可以检测图像中的机器人和装甲板，输出其检测框对应的坐标位置，随后机器人的检测框将与其对应的装甲板检测框进行配对。
 
+- 检测结果
+ <img src="images/Yolo检测/snap01717..jpg" width="55%" align=middle />
+表中的剪枝yolov3-boosting-1模型是进行1次残差模块剪枝1次卷积通道剪枝的结果；剪枝yolov3-boosting-2模型是进行了1次残差模块剪枝2次卷积通道剪枝的结果。
 
+- 运行效果图
+<center class="half">
+    <img src="images/Yolo检测/0820_00_00_21-00_00_34.gif" width="45%"/>
+    <img src="images/Yolo检测/0820_test_5 00_00_21-00_00_34.gif" width="45%"/>
+</center>
 
 ###### 开发前的配置要求
 
