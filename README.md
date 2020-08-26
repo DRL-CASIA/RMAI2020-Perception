@@ -64,36 +64,43 @@
 
 ### 软件功能介绍
 
-#### Yolo 检测模型
-1. 模型介绍
+1. Yolo 检测模型
+
+- 模型介绍
 <img src="images/yolo/snap01711..jpg" width="80%" align=center />
 哨兵将采集到的图像输入到yolov3-boosting模型中后，该模型可以检测图像中的机器人和装甲板，输出其检测框对应的坐标位置，随后机器人的检测框将与其对应的装甲板检测框进行配对。
 
-2. 检测结果
+- 检测结果
  <img src="images/yolo/snap01717..jpg" width="55%" align=center />
 表中的剪枝yolov3-boosting-1模型是进行1次残差模块剪枝1次卷积通道剪枝的结果；剪枝yolov3-boosting-2模型是进行了1次残差模块剪枝2次卷积通道剪枝的结果。
 
-3. 运行效果图
+- 运行效果图
 <center class="half">
-    <img src="images/yolo/0820_00_00_21-00_00_34.gif" width="45%"/>
-    <img src="images/yolo/0820_test_5 00_00_21-00_00_34.gif" width="45%"/>
+    <img src="images/yolo/0820_00_00_21-00_00_34.gif" width="40%"/>
+    <img src="images/yolo/0820_test_5 00_00_21-00_00_34.gif" width="40%"/>
 </center>
 
-#### Robot分类
-1. 算法流程
-<img src="images/robot/分类流程图.png" width="80%" align=center />
+2. Robot分类
+
+- 算法流程
+<img src="images/robot/分类流程图.png" width="50%" align=center />
 该模型以Yolo是否可以检测到装甲板为条件，将装甲板目标框信息或车体目标框信息输入到卷积分类网络中，实现了对红1车、红2车、蓝1车、蓝2车、灰1车以及灰2车的有效划分。
-2. 分类结果
-<img src="images/robot/分类结果图.png" width="80%" align=center />
-3. 运行效果图
+
+- 分类结果
+<img src="images/robot/分类结果图.png" width="50%" align=center />
+
+- 运行效果图
 
 
-#### 位置获取
-##### 灯条检测及距离解算
-1. 算法流程
+3. 位置获取
+3.1 灯条检测及距离解算
+- 算法流程
+<img src="images/position/灯条检测流程.png" width="50%" align=center />
+灯条识别采用传统图像处理的方法。输入为YOLO检测出的装甲板框或者车体框，输出为灯条对拟合外接矩形框的四个顶点坐标。
 
+距离解算部分，首先通过相机标定得到两个哨兵相机的内参，并通过识别场地中的二维码四个顶点以及SolvePnP得到两个哨兵相机外参。最后通过灯条检测识别的灯条对四个顶点坐标以及SolvePnP解算出灯条对中心相对哨兵的位置，根据哨兵相机外参和灯条相对哨兵位置解算出灯条中心的世界坐标系下坐标并加补偿当做车体的位置信息。
 
-
+- 解算结果
 
 ###### 开发前的配置要求
 
