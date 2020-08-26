@@ -81,10 +81,10 @@
 
 #### Robot分类
 1. 算法流程
-<img src="images/yolo/snap01711..jpg" width="80%" align=center />
+<img src="images/robot/分类流程图.png" width="80%" align=center />
 该模型以Yolo是否可以检测到装甲板为条件，将装甲板目标框信息或车体目标框信息输入到卷积分类网络中，实现了对红1车、红2车、蓝1车、蓝2车、灰1车以及灰2车的有效划分。
 2. 分类结果
-<img src="images/yolo/snap01711..jpg" width="80%" align=center />
+<img src="images/robot/分类结果图.png" width="80%" align=center />
 3. 运行效果图
 
 
