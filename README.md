@@ -50,9 +50,9 @@
 ## 目录
 
 - [软件功能介绍](#软件功能介绍)
+- [配置及安装](#配置及安装)
   - [开发前的配置要求](#开发前的配置要求)
   - [安装步骤](#安装步骤)
-- [软件效果展示](#软件效果展示)
 - [依赖工具及环境](#依赖工具及环境)
 - [编译及安装方式](#编译及安装方式)
 - [软硬件系统框图](#软硬件系统框图)
@@ -177,6 +177,14 @@
   
 实验证明这种方法能有效的在含有噪声的多种传感器数据中拟合真实值
 
+### 6 公布数据集
+以上所有结果均在公布数据集上训练和测试，请点击[链接](https://pan.baidu.com/s/14o_p44uMYHcNfe80j9vjxg)下载，提取码为**fd4x**。
+
+### 7 各模块运行速度
+以上所有实验均在xxx设备上进行测试，整个代码运行时间为xx，每个模块运行时间如下：
+
+
+### 配置及安装
 ###### 开发前的配置要求
 
 1. xxxxx x.x.x
@@ -192,25 +200,36 @@ git clone https://github.com/DRL-CASIA/Perception.git
 ```
 
 ### 文件目录说明
-eg:
 
 ```
 filetree 
-├── ARCHITECTURE.md
-├── LICENSE.txt
-├── README.md
-├── /account/
-├── /bbs/
-├── /docs/
-│  ├── /rules/
-│  │  ├── backend.txt
-│  │  └── frontend.txt
-├── manage.py
-├── /oa/
-├── /static/
-├── /templates/
-├── useless.md
-└── /util/
+|— 6_car_fengzhuang
+|                 |— data        #基于车体分类模型参数
+|                 |— classification_car.py   #基于车体分类函数封装
+|                 |— LeNet_car.py         #基于车体分类模型定义
+|— 8_classification_camera_fengzhuang
+|                 |— data        #基于车体角度回归模型参数
+|                 |— classification_angle_camera.py   #基于车体角度回归函数封装
+|                 |— LeNet_angle.py         #基于车体角度回归模型定义
+|
+|— armor_6_fengzhuang
+|                 |— data        #基于装甲板分类模型参数
+|                 |— classification.py   #基于装甲板分类函数封装
+|                 |— LeNet.py         #基于装甲板分类模型定义
+|
+|— cfg                             #yolo以及位置预测模型参数文件夹
+|— utils                            #辅助函数，用于读取yolo配置文件
+|— video_footage                    #测试视频及图片文件夹
+|— armor_detect.py                  #基于车体框灯条检测算法
+|— armor_detect_with_yolo_withlightbox_v3.py    #主函数
+|— armor_detect_with_yolo_withlightbox_v4.py    #主函数并行版本
+|— armor_detect_withlightbox.py       #基于装甲板灯条检测算法
+|— dog-cycle-car.jpg                 #yolo测试图
+|— models_nolambda_focallossw.py     #根据配置文件定义yolov3模型结构，读取权重
+|— position_predict.py                #基于车体框位置预测以及位置融合算法
+|— preprocess.py                    #图像处理，resize等  
+|— yolo_detect_v2.py                 #yolo算法
+
 
 ```
 
