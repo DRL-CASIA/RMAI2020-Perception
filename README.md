@@ -87,7 +87,7 @@
 该模型以Yolo是否可以检测到装甲板为条件，将装甲板目标框信息或车体目标框信息输入到卷积分类网络中，实现了对红1车、红2车、蓝1车、蓝2车、灰1车以及灰2车的有效划分。
 
 - 分类结果
-<img src="images/robot/分类结果图.png" width="50%" align=center />
+<img src="images/robot/分类结果.png" width="50%" align=center />
 
 - 运行效果图
 
@@ -102,12 +102,22 @@
 距离解算部分，首先通过相机标定得到两个哨兵相机的内参，并通过识别场地中的二维码四个顶点以及SolvePnP得到两个哨兵相机外参。最后通过灯条检测识别的灯条对四个顶点坐标以及SolvePnP解算出灯条对中心相对哨兵的位置，根据哨兵相机外参和灯条相对哨兵位置解算出灯条中心的世界坐标系下坐标并加补偿当做车体的位置信息。
 
 - 解算结果
-<img src="images/position/cal_error.png" width="50%" align=center />
+<img src="images/position/cal_error.PNG" width="50%" align=center />
 将解算位置的测试结果分别在x轴和y轴排序后进行误差分析，图中label表示真值，cal_method表示解算方法输出的结果，cal_error表示解算的误差
 
 3.2 距离预测
 - 算法流程
-<img src="images/position/mlp结构.png" width="50%" align=center />
+<img src="images/position/mlp结构.PNG" width="50%" align=center />
+根据哨兵相机高度和俯仰角固定，以及平面假设，利用神经网络来拟合相机坐标系到世界坐标系的转换矩阵，模型为三层的MLP结构，将Yolo检测得到的机器人检测框映射为世界地图坐标。
+
+- 预测结果
+<img src="images/position/mlp_error.PNG" width="50%" align=center />
+将预测位置的测试结果分别在x轴和y轴排序后进行误差分析，图中label表示真值，mlp_method表示模型输出的结果，mlp_error表示预测的误差
+
+- 距离解算及距离预测效果图
+<img src="images/position/mlp_效果.gif" width="50%" align=center />
+
+3.3 位置融合
 
 ###### 开发前的配置要求
 
