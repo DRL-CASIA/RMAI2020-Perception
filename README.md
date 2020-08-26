@@ -164,6 +164,18 @@
 
 - 运行效果图
 
+### 5 基于卡尔曼的多传感器融合
+- 算法流程
+
+<p align="center"><img src="images/kalman/流程.PNG" width="50%" align=center />
+  
+定位模块有多个输入来源，包括两个己方机器人的雷达传感器和两个哨兵的相机传感器，我们通过卡尔曼滤波来对传感器数据进行融合。
+
+- 融合结果
+
+<p align="center"><img src="images/kalman/error.png" width="50%" align=center />
+  
+实验证明这种方法能有效的在含有噪声的多种传感器数据中拟合真实值
 
 ###### 开发前的配置要求
 
