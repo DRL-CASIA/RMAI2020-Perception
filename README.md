@@ -93,6 +93,7 @@
 
 
 3. 位置获取
+
 3.1 灯条检测及距离解算
 - 算法流程
 <img src="images/position/灯条检测流程.png" width="50%" align=center />
@@ -101,6 +102,12 @@
 距离解算部分，首先通过相机标定得到两个哨兵相机的内参，并通过识别场地中的二维码四个顶点以及SolvePnP得到两个哨兵相机外参。最后通过灯条检测识别的灯条对四个顶点坐标以及SolvePnP解算出灯条对中心相对哨兵的位置，根据哨兵相机外参和灯条相对哨兵位置解算出灯条中心的世界坐标系下坐标并加补偿当做车体的位置信息。
 
 - 解算结果
+<img src="images/position/cal_error.png" width="50%" align=center />
+将解算位置的测试结果分别在x轴和y轴排序后进行误差分析，图中label表示真值，cal_method表示解算方法输出的结果，cal_error表示解算的误差
+
+3.2 距离预测
+- 算法流程
+<img src="images/position/mlp结构.png" width="50%" align=center />
 
 ###### 开发前的配置要求
 
