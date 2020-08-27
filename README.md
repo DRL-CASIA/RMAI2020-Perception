@@ -20,7 +20,7 @@
   <p align="center">
     Time to start！
     <br />
-    <a href="https://github.com/DRL-CASIA/Perception"><strong>Wiki</strong></a>
+    <a href="https://github.com/DRL-CASIA/Perception/wiki"><strong>Wiki</strong></a>
     <br />
     <br />
     <a href="https://github.com/DRL-CASIA/Perception">查看Demo</a>
