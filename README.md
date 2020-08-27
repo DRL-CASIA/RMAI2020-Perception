@@ -23,7 +23,7 @@
     <a href="https://github.com/DRL-CASIA/Perception/wiki"><strong>Wiki</strong></a>
     <br />
     <br />
-    <a href="https://github.com/DRL-CASIA/Perception">查看Demo</a>
+    <a href="https://github.com/DRL-CASIA/Perception/tree/master/demo">查看Demo</a>
     ·
     <a href="https://github.com/DRL-CASIA/Perception/issues">报告Bug</a>
     ·
