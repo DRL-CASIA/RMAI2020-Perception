@@ -1,0 +1,6 @@
+classes= 6
+train  = /media/xuer/Seagate Slim Drive/DJIROCO_dataset/train_22.txt
+valid  = /media/xuer/Seagate Slim Drive/DJIROCO_dataset/val_22.txt
+names  = /home/xuer/daima/pruning/Lam1360-YOLOv3-model-pruning-master-resnet_pruning2_upload/cfg/DJIROCO_22.names 
+backup = /home/xuer/daima/pruning/talebolano-yolov3-network-slimming-master/backup 
+eval=coco
