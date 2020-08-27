@@ -174,6 +174,12 @@
 - 运行效果图
 
 <p align="center"><img src="images/pose/运行效果.gif" width="50%" align=center />
+  
+### 6 软件效果展示
+
+检测结果如下，检测到车辆，颜色标号，位置，角度：
+
+<p align="center"><img src="images/pose/9f74536f81bb33ecfad83b50297a37b4 00_00_00-00_00_30.gif" width="50%" align=center />
 
 ### 6 基于卡尔曼的多传感器融合
 - 算法流程
