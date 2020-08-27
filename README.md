@@ -65,11 +65,14 @@
 
 ## 软件功能介绍
 
+
+### 1 软件系统架构
+
 哨兵检测系统包括如下几部分：每个哨兵采集图像经过检测算法，输出装甲板和机器人检测框。输出的装甲板或者机器人经过分类得到机器人颜色和ID号，经过距离解算和距离预测得到机器人在世界坐标下的位置，最后经过位姿估计模型，得到机器人的位姿信息。获得整个哨兵感知得到的机器人的ID，颜色，位姿，位置，信息。2个哨兵和2个机器人的信息经过信息融合模块，输出4个机器人的信息。
 
 <p align="center"><img src="https://github.com/DRL-CASIA/Perception/blob/master/images/yolo/snap01737..jpg" width="80%" align=middle />
 
-### 1 Yolo 检测模型
+### 2 Yolo 检测模型
 
 - 模型介绍
 
@@ -87,7 +90,7 @@
 
 <p align="center"><img src="images/yolo/0820_00_00_21-00_00_34.gif" width="40%"/>    <img src="images/yolo/0820_test_5 00_00_21-00_00_34.gif" width="40%"/>
 
-### 2 Robot分类
+### 3 Robot分类
 
 - 算法流程
 
@@ -104,9 +107,9 @@
 <p align="center"><img src="images/robot/运行效果.gif" width="50%" align=center />
 
 
-### 3 位置获取
+### 4 位置获取
 
-#### 3.1 灯条检测及距离解算
+#### 4.1 灯条检测及距离解算
 
 - 算法流程
 
@@ -122,7 +125,7 @@
 
 将解算位置的测试结果分别在x轴和y轴排序后进行误差分析，图中label表示真值，cal_method表示解算方法输出的结果，cal_error表示解算的误差
 
-#### 3.2 距离预测
+#### 4.2 距离预测
 
 - 算法流程
 
@@ -140,7 +143,7 @@
 
 <p align="center"><img src="images/position/mlp_效果.gif" width="50%" align=center />
 
-#### 3.3 位置融合
+#### 4.3 位置融合
 
 解算方法：可以利用现有算法解算距离，劣势是目标太小，容易漏检和误检
 
@@ -154,7 +157,7 @@
 - 运行效果图
 <p align="center"><img src="images/position/fuse效果.gif" width="50%" align=center />
 
-### 4 姿态估计
+### 5 姿态估计
 
 - 算法流程
 
@@ -172,7 +175,7 @@
 
 <p align="center"><img src="images/pose/运行效果.gif" width="50%" align=center />
 
-### 5 基于卡尔曼的多传感器融合
+### 6 基于卡尔曼的多传感器融合
 - 算法流程
 
 <p align="center"><img src="images/kalman/流程.PNG" width="50%" align=center />
@@ -185,10 +188,10 @@
   
 实验证明这种方法能有效的在含有噪声的多种传感器数据中拟合真实值
 
-### 6 公布数据集
+### 7 公布数据集
 以上所有结果均在公布数据集上训练和测试，请点击[链接](https://pan.baidu.com/s/14o_p44uMYHcNfe80j9vjxg)下载，提取码为**fd4x**。
 
-### 7 各模块运行速度
+### 8 各模块运行速度
 以上所有实验均在xxx设备上进行测试，整个代码运行时间为xx，每个模块运行时间如下：
 
 
