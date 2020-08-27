@@ -48,16 +48,10 @@
 
 # 感知模块 
 ## 目录
-,
+
 - [软件功能介绍](#软件功能介绍)
 - [依赖环境及运行方式](#依赖环境及运行方式)
-- [原理介绍与理论支持分析](#原理介绍与理论支持分析)
-  - [如何参与开源项目](#如何参与开源项目)
-- [软件架构与层级图](#软件架构与层级图)
-- [开源协议](#开源协议)
-- [设计模式](#设计模式)
-- [鸣谢](#鸣谢)
-
+- [文件目录说明](#文件目录说明)
 
 
 ## 软件功能介绍
@@ -232,69 +226,33 @@ git clone https://github.com/DRL-CASIA/Perception.git
 ```
 filetree 
 |— car_classify
-|                 |— data        #基于车体分类模型参数
+|                 |— data                    #基于车体分类模型参数
 |                 |— classification_car.py   #基于车体分类函数封装
-|                 |— LeNet_car.py         #基于车体分类模型定义
+|                 |— LeNet_car.py            #基于车体分类模型定义
 |— angle_classify
-|                 |— data        #基于车体角度回归模型参数
+|                 |— data                             #基于车体角度回归模型参数
 |                 |— classification_angle_camera.py   #基于车体角度回归函数封装
-|                 |— LeNet_angle.py         #基于车体角度回归模型定义
+|                 |— LeNet_angle.py                   #基于车体角度回归模型定义
 |
 |— armor_classify
-|                 |— data        #基于装甲板分类模型参数
+|                 |— data                #基于装甲板分类模型参数
 |                 |— classification.py   #基于装甲板分类函数封装
-|                 |— LeNet.py         #基于装甲板分类模型定义
+|                 |— LeNet.py            #基于装甲板分类模型定义
 |
-|— cfg                             #yolo以及位置预测模型参数文件夹
+|— cfg                              #yolo以及位置预测模型参数文件夹
 |— utils                            #辅助函数，用于读取yolo配置文件
 |— video_footage                    #测试视频及图片文件夹
 |— armor_detect.py                  #基于车体框灯条检测算法
-|— main.py    #主函数
-|— armor_detect_withlightbox.py       #基于装甲板灯条检测算法
-|— dog-cycle-car.png                 #yolo测试图
-|— models_nolambda_focallossw.py     #根据配置文件定义yolov3模型结构，读取权重
-|— position_predict.py                #基于车体框位置预测以及位置融合算法
+|— main.py                          #主函数
+|— armor_detect_withlightbox.py     #基于装甲板灯条检测算法
+|— dog-cycle-car.png                #yolo测试图
+|— models_nolambda_focallossw.py    #根据配置文件定义yolov3模型结构，读取权重
+|— position_predict.py              #基于车体框位置预测以及位置融合算法
 |— preprocess.py                    #图像处理，resize等  
-|— yolo_detect_v2.py                 #yolo算法
+|— yolo_detect_v2.py                #yolo算法
 
 
 ```
-
-
-
-
-
-### 软件效果展示 
-
-
-### 软硬件系统框图
-
-
-
-#### 原理介绍与理论支持分析
-
-贡献使开源社区成为一个学习、激励和创造的绝佳场所。你所作的任何贡献都是**非常感谢**的。
-
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
-### 软件架构与层级图
-
-该项目使用Git进行版本管理。您可以在repository参看当前可用版本。
-
-### 开源协议
-
-该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/DRL-CASIA/Perception/blob/master/LICENSE.txt)
-
-### 设计模式
-
-### 鸣谢
 
 
 <!-- - [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
