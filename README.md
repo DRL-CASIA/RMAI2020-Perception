@@ -177,7 +177,7 @@
 
 <p align="center"><img src="images/kalman/流程.PNG" width="50%" align=center />
   
-定位模块有多个输入来源，包括两个己方机器人的雷达传感器和两个哨兵的相机传感器，我们通过卡尔曼滤波来对传感器数据进行融合。
+定位模块有多个输入来源，包括两个己方机器人的雷达相机传感器和两个哨兵的相机传感器，我们通过卡尔曼滤波来对传感器数据进行融合。
 
 - 融合结果
 
@@ -215,32 +215,32 @@ Robot位置解算时间：0.001s
 ### 1 依赖环境
 
 - pytorch 1.6.0
-- torchvision 0.7.0
-- opencv-python 4.3.0.36
-- python>=3.6
-- 要在GPU上运行，需要配置cuda>=9.0
+- torchvision 0.2.0
+- opencv-python 4.3.0.34
+- python 3.6
+- 要在GPU上运行，需要配置cuda>=8.0
 
 ### 2 运行方法
 
 git clone https://github.com/DRL-CASIA/Perception.git
 
-python main.py
+测试程序：进入demo文件，执行 python main.py
 
 
 ## 文件目录说明
 
 ```
 filetree 
-|— 6_car_fengzhuang
+|— car_classify
 |                 |— data        #基于车体分类模型参数
 |                 |— classification_car.py   #基于车体分类函数封装
 |                 |— LeNet_car.py         #基于车体分类模型定义
-|— 8_classification_camera_fengzhuang
+|— angle_classify
 |                 |— data        #基于车体角度回归模型参数
 |                 |— classification_angle_camera.py   #基于车体角度回归函数封装
 |                 |— LeNet_angle.py         #基于车体角度回归模型定义
 |
-|— armor_6_fengzhuang
+|— armor_classify
 |                 |— data        #基于装甲板分类模型参数
 |                 |— classification.py   #基于装甲板分类函数封装
 |                 |— LeNet.py         #基于装甲板分类模型定义
@@ -249,10 +249,9 @@ filetree
 |— utils                            #辅助函数，用于读取yolo配置文件
 |— video_footage                    #测试视频及图片文件夹
 |— armor_detect.py                  #基于车体框灯条检测算法
-|— armor_detect_with_yolo_withlightbox_v3.py    #主函数
-|— armor_detect_with_yolo_withlightbox_v4.py    #主函数并行版本
+|— main.py    #主函数
 |— armor_detect_withlightbox.py       #基于装甲板灯条检测算法
-|— dog-cycle-car.jpg                 #yolo测试图
+|— dog-cycle-car.png                 #yolo测试图
 |— models_nolambda_focallossw.py     #根据配置文件定义yolov3模型结构，读取权重
 |— position_predict.py                #基于车体框位置预测以及位置融合算法
 |— preprocess.py                    #图像处理，resize等  
