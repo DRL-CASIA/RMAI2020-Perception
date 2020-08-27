@@ -52,7 +52,8 @@
 - [软件功能介绍](#软件功能介绍)
 - [依赖环境及运行方式](#依赖环境及运行方式)
 - [文件目录说明](#文件目录说明)
-
+- [开源协议](#开源协议)
+- [鸣谢](#鸣谢)
 
 ## 软件功能介绍
 
@@ -254,6 +255,11 @@ filetree
 
 ```
 
+## 开源协议
+
+该项目签署了MIT 授权许可，详情请参阅 [LICENSE.txt](https://github.com/DRL-CASIA/Perception/blob/master/LICENSE.txt)
+
+## 鸣谢
 
 <!-- - [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 - [Img Shields](https://shields.io)
