@@ -174,14 +174,8 @@
 - 运行效果图
 
 <p align="center"><img src="images/pose/运行效果.gif" width="50%" align=center />
-  
-### 6 软件效果展示
 
-检测结果如下，检测到车辆，颜色标号，位置，角度：
-
-<p align="center"><img src="images/pose/9f74536f81bb33ecfad83b50297a37b4 00_00_00-00_00_30.gif" width="50%" align=center />
-
-### 7 基于卡尔曼的多传感器融合
+### 6 基于卡尔曼的多传感器融合
 - 算法流程
 
 <p align="center"><img src="images/kalman/流程.PNG" width="50%" align=center />
@@ -193,6 +187,12 @@
 <p align="center"><img src="images/kalman/error.png" width="50%" align=center />
   
 实验证明这种方法能有效的在含有噪声的多种传感器数据中拟合真实值
+
+### 7 软件效果展示
+
+检测结果如下，检测到车辆，颜色标号，位置，角度：
+
+<p align="center"><img src="images/pose/9f74536f81bb33ecfad83b50297a37b4 00_00_00-00_00_30.gif" width="50%" align=center />
 
 ### 8 公布数据集
 以上所有结果均在公布数据集上训练和测试，请点击[链接](https://pan.baidu.com/s/14o_p44uMYHcNfe80j9vjxg)下载，提取码为**fd4x**。
