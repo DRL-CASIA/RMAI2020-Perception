@@ -181,7 +181,7 @@
 
 <p align="center"><img src="images/pose/9f74536f81bb33ecfad83b50297a37b4 00_00_00-00_00_30.gif" width="50%" align=center />
 
-### 6 基于卡尔曼的多传感器融合
+### 7 基于卡尔曼的多传感器融合
 - 算法流程
 
 <p align="center"><img src="images/kalman/流程.PNG" width="50%" align=center />
@@ -194,10 +194,10 @@
   
 实验证明这种方法能有效的在含有噪声的多种传感器数据中拟合真实值
 
-### 7 公布数据集
+### 8 公布数据集
 以上所有结果均在公布数据集上训练和测试，请点击[链接](https://pan.baidu.com/s/14o_p44uMYHcNfe80j9vjxg)下载，提取码为**fd4x**。
 
-### 8 各模块运行速度
+### 9 各模块运行速度
 以上所有实验均在xxx设备上进行测试，整个代码运行时间为xx，每个模块运行时间如下：
 
 
