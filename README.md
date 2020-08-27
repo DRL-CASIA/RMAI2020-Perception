@@ -233,7 +233,7 @@ git clone https://github.com/DRL-CASIA/Perception.git
 ## 文件目录说明
 
 ```
- 
+demo
 |— car_classify
 |                 |— data                    #基于车体分类模型参数
 |                 |— classification_car.py   #基于车体分类函数封装
