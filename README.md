@@ -187,7 +187,7 @@
 
 ### 7 软件效果展示
 
-检测结果如下，检测到车辆，颜色标号，位置，角度：
+哨兵检测效果如下：检测框上方第一行显示颜色标号，角度（Pose）第二行显示：位置（x，y）
 
 <p align="center"><img src="images/pose/9f74536f81bb33ecfad83b50297a37b4 00_00_00-00_00_30.gif" width="50%" align=center />
 
